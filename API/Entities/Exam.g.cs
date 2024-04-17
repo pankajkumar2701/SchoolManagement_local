@@ -25,6 +25,10 @@ namespace SchoolManagement_local.Entities
         /// Name of the Exam 
         /// </summary>
         public string? Name { get; set; }
+        /// <summary>
+        /// Subject of the Exam 
+        /// </summary>
+        public string? Subject { get; set; }
 
         /// <summary>
         /// StartDate of the Exam 

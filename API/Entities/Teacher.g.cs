@@ -22,6 +22,10 @@ namespace SchoolManagement_local.Entities
         [Required]
         public Guid Id { get; set; }
         /// <summary>
+        /// Name of the Teacher 
+        /// </summary>
+        public string? Name { get; set; }
+        /// <summary>
         /// FirstName of the Teacher 
         /// </summary>
         public string? FirstName { get; set; }

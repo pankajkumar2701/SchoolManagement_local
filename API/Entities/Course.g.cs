@@ -39,18 +39,6 @@ namespace SchoolManagement_local.Entities
         public int Credits { get; set; }
 
         /// <summary>
-        /// Foreign key referencing the Instructor to which the Course belongs 
-        /// </summary>
-        [Required]
-        public Guid InstructorId { get; set; }
-
-        /// <summary>
-        /// Navigation property representing the associated Instructor
-        /// </summary>
-        [ForeignKey("InstructorId")]
-        public Instructor? InstructorId_Instructor { get; set; }
-
-        /// <summary>
         /// CreatedOn of the Course 
         /// </summary>
         [Column(TypeName = "datetime")]

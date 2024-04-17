@@ -195,6 +195,7 @@ export class TemplateListComponent implements OnInit, OnChanges, OnDestroy {
           visibleText = maskedValue;
         if (typeof value.getMonth === 'function') {
           maskedValue = value.toISOString();
+          visibleText = value.toLocaleDateString();
         } else if (typeof value === 'boolean') {
           visibleText = `${this.filterFields.find(o => o.fieldName === key)?.label || key}: ${value ? 'Yes' : 'No'}`;
         } else if (RegExGuid.test(value)) {

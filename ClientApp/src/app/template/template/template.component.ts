@@ -106,7 +106,7 @@ export class TemplateComponent implements OnInit, OnDestroy {
     switch (fieldInfo.dataType.toLowerCase()) {
       case 'datetime': {
         const date = Date.parse(data + 'Z');
-        return isNaN(date) ? data : new Date(data + 'Z').toLocaleString();
+        return isNaN(date) ? data : new Date(data + 'Z').toLocaleDateString();
       }
       case 'numeric':
         return record[fieldName] !== undefined && record[fieldName] !== null ? new Intl.NumberFormat().format(Number(data)) : '';

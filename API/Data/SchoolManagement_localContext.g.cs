@@ -215,7 +215,6 @@ namespace SchoolManagement_local.Data
             modelBuilder.Entity<Role>().HasOne(a => a.UpdatedBy_User).WithMany().HasForeignKey(c => c.UpdatedBy);
             modelBuilder.Entity<ParentGuardian>().HasOne(a => a.ContactInformationId_ContactInformation).WithMany().HasForeignKey(c => c.ContactInformationId);
             modelBuilder.Entity<ParentGuardian>().HasOne(a => a.AddressId_Address).WithMany().HasForeignKey(c => c.AddressId);
-            modelBuilder.Entity<Course>().HasOne(a => a.InstructorId_Instructor).WithMany().HasForeignKey(c => c.InstructorId);
             modelBuilder.Entity<Enrollment>().HasOne(a => a.StudentId_Student).WithMany().HasForeignKey(c => c.StudentId);
             modelBuilder.Entity<Enrollment>().HasOne(a => a.CourseId_Course).WithMany().HasForeignKey(c => c.CourseId);
             modelBuilder.Entity<Attendance>().HasOne(a => a.StudentId_Student).WithMany().HasForeignKey(c => c.StudentId);
